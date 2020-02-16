@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/registration1.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('.signup').hide();
+		$('#signup').click(function()
+		{
+			$('.login').slideUp('slow');
+			$('.signup').slideDown('slow');
+		});
+		$('#login').click(function()
+		{
+			$('.signup').slideUp('slow');
+			$('.login').slideDown('slow');
+		});	
+
+		
+	});
+
+
+    </script>
+    
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+		
+<script type="text/javascript" src="registration1.js"></script>
+</head>
+
+<div>
+<body style="background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+</div>
+<div id="content" >
+	
+	
+	<h2>Login/Sign-Up</h2>	
+	<br>
+	<div>
+		
+		<form name="myform" method="post" action="submit">
+		<input type="radio" name="option" id="login" checked="checked" /> <span class="option">Login</span><input type="radio" name="option" id="signup" /><span class="option">Sign up</span>
+		</form>
+		<br/>
+	</div>
+	
+	<!-- Login form -->
+	<div class="login">
+	  <div class="detail">Welcome back, please continue with your username and password.</div>
+		<form name="login" id="log">
+			<label style="color: black;font-family: calibri;">Username</label><br />
+			<input type="text" name="username" class="input" id="username"/><br/><br>
+			<label style="color: black;font-family: calibri;">Password</label><br />
+			<input type="password" name="password" class="input" id="password"/><br/>
+			<div class="" align="center"><a class="btn btn-primary" href="add-website-here" target="_blank" rel="nofollow noopener" style="padding-bottom: 10px;padding-top: 10px;margin-bottom: 10px;" id="logbtn">Login</a></div>
+		</form>
+	</div>
+	<!-- end Login form -->
+	
+
+	<!-- Signup form -->
+	<div class="signup">
+		<div class="detail">Welcome, sign up and join us!</div>
+		<form id="signup_form"  id="reg" onsubmit="return registerfirstvalid()"; >
+			<label style="color: black;font-family: calibri;">Name</label><br />
+			<input   type="text" name="name" class="input" id="name"/><br><span id="name_er" class="label label-danger" style="display: none;font-family: calibri;margin-left: 20px;font-size: 15px">Invalid Name</span><br> 
+			
+			<label style="color: black; font-family: calibri;">Email</label><br />
+			<input   type="text" name="email" class="input" id="email"/><br><!-- <span id="email_er" class="label label-danger" style="display:none;font-family: calibri;margin-left: 20px;font-size: 15px">Invalid Email</span><br> -->
+			<br>
+			<label style="color: black; font-family: calibri;">Enter password</label><br/>
+			<input type="password" name="password"  id="password" /><br> <span id="pass_er" class="label label-danger" style="display:none;font-family: calibri;margin-left: 20px;font-size: 15px">Password length must be greater than 8</span><br>
+
+			<label style="color: black; font-family: calibri;">Age</label><br/>
+			<input name="age"  id="age"/><br> <br><br>
+			
+			<div class="" align="center"><button type="submit" class="btn btn-primary" id="regbtn" onsubmit="registerfirstvalid()">Sign Up</button></div>
+		</form>
+	</div>
+	<!-- end Signup form -->
+
+</div>
+</body>
+</html>
